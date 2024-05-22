@@ -1,0 +1,41 @@
+.acc-wrap-card {
+  background: #1F1F1F;
+
+  .btn-info-acc{
+    small{
+      font-size: 10px;
+    }
+  }
+}
+
+
+:host ::ng-deep {
+  .p-card {
+    background: #1F1F1F;
+    color: #fff;
+    &-body {
+      padding: .6rem;
+    }
+    &-content {
+      padding: 0;
+    }
+  }
+
+  .custom-btn {
+    .p-button{
+      background-color: #202020;
+      border:none;
+      color: #fff;
+    }
+  }
+
+
+  .p-accordion{
+    .p-accordion-header-link, .p-accordion-content{
+      color: #fff;
+      background: #373737;
+      border-color: #373737;
+    }
+  }
+}
+
