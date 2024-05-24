@@ -3,16 +3,27 @@
     <p-accordion class="w-full first-accordion" expandIcon=" " collapseIcon=" ">
     <p-accordionTab class="p-2" iconPos="end">
       <ng-template pTemplate="header" class="border-round-sm">
-          <span class="flex align-items-center gap-2 w-full">
-              <p-avatar
-                image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
-                shape="circle" />
-              <span class="font-bold white-space-nowrap">
-                  Amy Elsner
-              </span>
-
-              <p-button class="ml-auto mr-2 custom-btn border-round-md" icon="pi pi-chevron-up" label="Ver detalles" iconPos="right" size="small"></p-button>
-          </span>
+        <div class="accordion-header-details flex align-items-center justify-content-between w-full" (click)="toggleAccordion()">
+          <div class="flex align-items-center gap-3">
+            <div>
+              <img src="/assets/icons/placeholder.png" alt="">
+            </div>
+            <div class="p-grid p-dir-col p-align-center">
+              <div class="p-col my-1">
+                <h4 class="font-bold m-0">Mopa Triangular 360º</h4>
+              </div>
+              <div class="p-col">
+                <p class="font-light m-0">Detalles del producto</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p-button class="ml-auto mr-2 custom-btn border-round-md"
+                      icon="{{ isAccordionExpanded ? 'pi pi-chevron-up' : 'pi pi-chevron-down' }}"
+                      label="Ver detalles" iconPos="right" size="small" >
+            </p-button>
+          </div>
+        </div>
       </ng-template>
       <div class="p-grid p-nogutter">
        <div class="grid justify-content-center">
@@ -574,7 +585,6 @@
         </div>
       </p-accordionTab>
     </p-accordion>
-
     <p-accordion class="w-full first-accordion" expandIcon=" " collapseIcon=" ">
       <p-accordionTab class="p-2" iconPos="end">
         <ng-template pTemplate="header" class="border-round-sm">

@@ -16,4 +16,10 @@ import {CommonModule} from "@angular/common";
 })
 export class WinnerDetailComponent {
   cardItems = [1, 2, 3, 4, 5, 6];
+
+  isAccordionExpanded: boolean = false;
+
+  toggleAccordion(): void {
+    this.isAccordionExpanded = !this.isAccordionExpanded;
+  }
 }
