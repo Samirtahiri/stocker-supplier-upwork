@@ -15,11 +15,10 @@ import {CommonModule} from "@angular/common";
   styleUrls: ['./winner-detail.component.scss']
 })
 export class WinnerDetailComponent {
-  cardItems = [1, 2, 3, 4, 5, 6];
-
+  accordionStates: boolean[] = [false, false, false, false, false];
   isAccordionExpanded: boolean = false;
 
-  toggleAccordion(): void {
-    this.isAccordionExpanded = !this.isAccordionExpanded;
+  toggleAccordion(index: number): void {
+    this.accordionStates[index] = !this.accordionStates[index];
   }
 }
